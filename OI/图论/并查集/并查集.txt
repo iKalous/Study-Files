@@ -1,0 +1,74 @@
+var     dad:array[0..1000000] of longint;
+        n,i,x,y,k,l,t,m:longint;
+function find(c:longint):longint;
+begin
+        if dad[c]=c then exit(c);
+        dad[c]:=find(dad[c]);
+        exit(dad[c]);
+end;
+begin
+        assign(input,'relation.in');reset(input);
+        assign(output,'relation.out');rewrite(output);
+        readln(m,n);
+        for i:=1 to m do dad[i]:=i;
+        t:=n;
+        for i:=1 to n do
+        begin
+                readln(x,y);
+                k:=find(x);
+                l:=find(y);
+                if k<>l then
+                        dad[k]:=dad[y];
+        end;
+        readln(n);
+        for i:=1 to n do
+        begin
+                readln(x,y);
+                if find(x)<>find(y) then writeln('No')
+                else writeln('Yes');
+        end;
+        close(input);close(output);
+end.
+
+
+
+第一行，n和m。
+接下来m行，每行两个数x和y，表示x和y是亲戚关系。
+第m+2行，k。
+接下来k行，每行两个数a和b，表示询问a和b是不是亲戚关系。
+n<=100000,m,k<=200000
+
+
+
+
+
+
+#include<cstdio>
+long dad[1000000];
+long n,m;
+long find(long x)
+{
+	if (dad[x]==x) return x;
+	dad[x]=find(dad[x]);
+	return dad[x];
+}
+int main()
+{
+	scanf("%ld%ld",&n,&m);
+	for (int i=1;i<=n;i++) dad[i]=i;
+	for (int i=1;i<=m;i++)
+	{
+		long x,y,k,l;
+		scanf("%ld%ld",&x,&y);
+		k=find(x);
+		l=find(y);
+		dad[k]=dad[l];
+	}
+	scanf("%ld",&m);
+	for (int i=1;i<=m;i++);
+	{
+		long x,y;
+		scanf("%ld%ld",&x,&y);
+	    find(x)==find(y) ? printf("YES\n"):printf("NO\n");
+	}
+}

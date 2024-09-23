@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-mingw32-make"
+	BuildStamp="20240921-0346-Experimental"
+	Name="[NON-UTF-8-BYTE-0xC5][NON-UTF-8-BYTE-0xED]С[NON-UTF-8-BYTE-0xD6][NON-UTF-8-BYTE-0xED]"
+	Generator="ctest-3.30.2"
+	CompilerName="C:/Downloads/x86_64-8.1.0-release-win32-seh-rt_v6-rev0/mingw64/bin/g++.exe"
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="[NON-UTF-8-BYTE-0xC5][NON-UTF-8-BYTE-0xED]С[NON-UTF-8-BYTE-0xD6][NON-UTF-8-BYTE-0xED]"
+	OSRelease=" Personal"
+	OSVersion=" (Build 9200)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString=""
+	VendorID="Unknown Manufacturer"
+	FamilyID="0"
+	ModelID="0"
+	ProcessorCacheSize="0"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="15434"
+	TotalPhysicalMemory="8010"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2400"
+	>
+	<Testing>
+		<StartDateTime>Sep 21 15:45 [NON-UTF-8-BYTE-0xD6]й[NON-UTF-8-BYTE-0xFA][NON-UTF-8-BYTE-0xB1][NON-UTF-8-BYTE-0xEA]׼ʱ[NON-UTF-8-BYTE-0xBC][NON-UTF-8-BYTE-0xE4]</StartDateTime>
+		<StartTestTime>1726904713</StartTestTime>
+		<TestList/>
+		<EndDateTime>Sep 21 15:45 [NON-UTF-8-BYTE-0xD6]й[NON-UTF-8-BYTE-0xFA][NON-UTF-8-BYTE-0xB1][NON-UTF-8-BYTE-0xEA]׼ʱ[NON-UTF-8-BYTE-0xBC][NON-UTF-8-BYTE-0xE4]</EndDateTime>
+		<EndTestTime>1726904713</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

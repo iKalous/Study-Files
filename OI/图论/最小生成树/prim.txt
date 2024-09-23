@@ -1,0 +1,96 @@
+var     a,dist:array[0..10000] of longint;
+        f:array[0..10000,0..3] of longint;
+        bz:array[0..10000] of boolean;
+        n,i,j,k,x,num,ans,maxlong,min,mini,t:longint;
+function min1(a,b:longint):longint;
+begin
+        if a<b then exit(a)
+        else exit(b);
+end;
+begin
+        readln(n);
+        for i:=1 to n do
+        begin
+                for j:=1 to n do
+                begin
+                        read(x);
+                        if x>0 then
+                        begin
+                                inc(k);
+                                f[k,1]:=j;
+                                f[k,2]:=x;
+                                f[k,3]:=a[i];
+                                a[i]:=k;
+                        end;
+                end;
+        end;
+        maxlong:=100000007;
+        for i:=1 to n do dist[i]:=maxlong;
+        num:=0;
+        dist[1]:=0;
+        while num<n do
+        begin
+                min:=maxlong;
+                for i:=1 to n do
+                        if (dist[i]<min) and not(bz[i]) then
+                        begin
+                                min:=dist[i];
+                                mini:=i;
+                        end;
+                t:=a[mini];
+                while t>0 do
+                begin
+                        dist[f[t,1]]:=min1(dist[f[t,1]],f[t,2]);
+                        t:=f[t,3];
+                end;
+                bz[mini]:=true;
+                inc(ans,min);
+                inc(num);
+        end;
+        writeln(ans);
+end.
+
+第一行：	农场的个数，N（3<=N<=100）。
+第二行..结尾:	后来的行包含了一个N*N的矩阵,表示每个农场之间的距离。理论上，他们是N行，每行由N个用空格分隔的数组成，实际上，他们限制在80个字符，因此，某些行会紧接着另一些行。当然，对角线将会是0，因为不会有线路从第i个农场到它本身。
+
+
+
+
+#include<cstdio>
+const long maxlong=1e9+7;
+long f[10000][4];
+bool bz[10000];
+long a[10000],k,ans;
+long min1(long a,long b){return a<b ? a:b;}
+void build(long x,long y,long z)
+{
+	f[++k][1]=y;
+	f[k][2]=z;
+	f[k][3]=a[x];
+	a[x]=k;
+}
+int main()
+{
+	long n,m;
+	scanf("%ld%ld",&n,&m);
+	for (int i=1;i<=m;i++)
+	{
+		long x,y,z;
+		scanf("%ld%ld%ld",&x,&y,&z);
+		build(x,y,z);
+	}
+	long dist[10000]; 
+	for (int i=1;i<=n;i++) dist[i]=maxlong;
+	dist[1]=0;
+	long num=0;
+	while (num<n)
+	{
+		long mini=maxlong,min=maxlong;
+		for (int i=1;i<=n;i++)
+			if (dist[i]<min&&!bz[i]) min=dist[i],mini=i;
+		for (int t=a[mini];t>0;t=f[t][3])
+			dist[f[t][1]]=min1(dist[f[t][1]],f[t][2]);
+		bz[mini]=1;ans+=min,num++;
+	}
+	printf("%ld",ans);
+}

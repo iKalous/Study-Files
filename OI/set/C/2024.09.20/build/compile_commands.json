@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/Study/OI/set/C/2024.09.20/build",
+  "command": "C:\\Downloads\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\small.dir\\a+b.c.obj -c D:\\Study\\OI\\set\\C\\2024.09.20\\a+b.c",
+  "file": "D:/Study/OI/set/C/2024.09.20/a+b.c",
+  "output": "CMakeFiles/small.dir/a+b.c.obj"
+},
+{
+  "directory": "D:/Study/OI/set/C/2024.09.20/build",
+  "command": "C:\\Downloads\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\small.dir\\null.c.obj -c D:\\Study\\OI\\set\\C\\2024.09.20\\null.c",
+  "file": "D:/Study/OI/set/C/2024.09.20/null.c",
+  "output": "CMakeFiles/small.dir/null.c.obj"
+}
+]

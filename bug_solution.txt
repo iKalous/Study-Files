@@ -1,0 +1,89 @@
+2024.09.19
+
+如果vscode无法正常更新
+
+极大概率是因为Code.exe被移动了
+根据所给的报错位置找到日志文件，将Code.exe移动到日志文件提供的位置即可解决问题
+
+——————————————————————————————————————————————————————————————————————————————————————————
+VSC的Cmake
+
+这个ctrl shift + p 输入cmake quick start 然后选 executable（可执行的）
+
+然后下面有生成键一键生成build
+
+——————————————————————————————————————————————————————————————————————————————————————————
+
+而如果不幸cmake没有设置好路径也没有配置好kit
+这边有补救方案
+
+user设置中找到 Cmake Options : Status Bar Visibility
+将hidden 改为 visible
+
+然后在编译器底下就可以直接修改kit
+
+再找到Cmake Cmake Path
+找到本地cmake.exe的地址，复制过来（记得结尾时/cmake.exe）
+然后就解决了
+
+
+解决这个问题的同时可以检验mingw是否配置成功
+——————————————————————————————————————————————————————————————————————————————————————————
+
+
+——————————————————————————————————————————————————————————————————————————————————————————
+——————————————————————————————————————————————————————————————————————————————————————————
+
+
+2024.09.21
+
+
+多文件开发
+
+首先就是这个文件夹里面只能有一个main函数！！
+
+然后想要多文件开发那就必须修改.json文件
+
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe 生成活动文件",
+			"command": "c:\\Downloads\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				// "${file}",
+				"${fileDirname}\\*.c",
+				"-o",
+				//"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${workspaceFolder}\\main.exe"
+			],
+			"options": {
+				"cwd": "c:\\Downloads\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: c:\\Downloads\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}
+
+这是一个模板
+
+最后运行的时候不要用code runner 而是手动运行！
+
+
+——————————————————————————————————————————————————————————————————————————————————
+
+其实VScode没必要用cmake，不过还是花了大代价去学习，说不定以后用得到呢？
+
+更加常用的应该是.vscode 也即是自带的 生成task.json文件
+然后这个也是在终端中生成 配置任务 （config task）
+
+
+
+

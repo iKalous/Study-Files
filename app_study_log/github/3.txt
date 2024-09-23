@@ -1,0 +1,51 @@
+SSH-key 与身份校验
+
+SSH-key 生成
+ssh-keygen -t rsa -C "邮箱地址"
+cd ~/.ssh
+cat id_rsa.pub （显示公钥）
+
+这样就会生成 id_rsa（私钥） 和 id_rsa.pub（公钥上传至github）
+
+关联SSH-key到GitHub账户
+
+点击头像然后进入setting，可以点击ssh & gpg keys
+将显示的公钥输入即可
+
+记得检验密钥是否设置成功！
+输入 ssh -T git@github.com
+
+接下来回到主页创建新的仓库（第一次显示的是new repository，之后就是new）
+该填的备注就填一下，但是有一些详细的设置不是很清楚（课上没讲）
+
+然后会显示让你创建仓库的方式：创建一个新的或者移植本地至网上
+
+（目前只学了本地移植到网上） 
+会显示类似 git remote add origin https://github.com/iKalous/github_study-remote.git
+git branch -M main
+git push -u origin main 的指令
+其中网址就是你的仓库的地址
+
+在git 仓库中我们可以查询修改的记录以及内容
+
+————————————————————————————————————————————————————————————————————————————
+
+
+接下来是github网站的用法
+
+git 与 github 交互常用命令
+
+克隆git仓库到本地，让自己能查看或修改项目 git clone + 该仓库的ssh key
+
+拉取远程仓库数据并合并到当前分支 git pull （本质上是两个操作 git fetch 和 git merge）
+
+推送本地仓库的commit记录到 git push A B（这里的A一般是git remote -v中显示的origin B是当前你要上传的分支，一般是main）
+
+
+ssh -T git@github.com
+
+
+下载别人的仓库至本地进行开发
+
+————————————————————————————————————————————————————————————————————————————
+

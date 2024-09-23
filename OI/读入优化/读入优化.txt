@@ -1,0 +1,15 @@
+#include<cstdio>
+inline long read()
+{
+	char ch;
+	while ((ch=getchar())<'0'||ch>'9');
+	long res=ch-48;
+	while ((ch=getchar())>='0'&&ch<='9')
+	res=res*10+ch-48;
+	return res;
+}
+int main()
+{
+	long n=read();
+	printf("%ld",n);
+}

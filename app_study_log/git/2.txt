@@ -1,0 +1,35 @@
+
+config 配置
+声明成员 git config --global user.name "名字"
+声明邮箱 git config --global user.email "邮箱地址"
+
+新建git仓库 git init （这里值得注意的是第一次initial时 .git文件属于隐藏的文件夹需要在“查看”显示隐藏的文件）
+这个.git文件是全部git使用的核心，有关的修改都会被记录在里面
+
+git中文件的三种状态
+已修改 已暂存 已提交 
+
+展示git仓库 git status
+
+添加文件到暂存区 git add 文件名
+提交暂存区的修改 git commit -m “此次修改的信息（如 create a new file : 文件名）”
+
+查看提交日志 git log
+当输出的日志较多的时候 输入 :q 后按回车 可以退出输出
+
+将当前文件夹所有的文件纳入跟踪（添加至暂存） git add . 或者 git add -A
+
+调用版本 git checkout 版本代码（git log中会显示）
+
+新建分支 git checkout -b 新分支名
+可以注意到每次操作亮蓝色的字体会显示所在分支（如master）
+
+查看分支信息 git branch
+
+分支合并 git merge
+后进入vim的界面 按insert键可以进入编辑，输入auto自动合并
+保留此次修改按 :x, 直接退出 :q（这个组合常用通用）
+
+
+
+然后打开git bash 的时候记得要在工作文件夹啊啊啊！
