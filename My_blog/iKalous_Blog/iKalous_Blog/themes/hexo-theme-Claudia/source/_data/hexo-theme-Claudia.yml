@@ -1,0 +1,81 @@
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Archive: /archives
+
+widgets:
+  - tag
+  - archive
+  - recent_posts
+  - category
+  - profile
+
+# social config
+social:
+  zhihu:
+  twitter: /
+  facebook: /
+  linkedin:
+  instagram: /
+  github: iKalous
+
+user:
+  name: iKalous_Oscar
+  avatar: /imavator.png
+  location: On earth
+  description: Talk is cheap, show me the code.
+  footnotes: # footnotes
+
+# documents: https://github.com/utterance/utterances
+# API config: https://utteranc.es/
+comment_utteranc:
+  enable: true
+  repo: git@github.com:iKalous/iKalous.github.io.git
+
+
+# documents: https://valine.js.org/quickstart.html
+comment_valine:
+  enable: false
+  appId:
+  appKey:
+
+comment_disqus:
+    enable: false
+    url:  https://iKalous.github.io.git
+    name: iKalous_Blog
+
+# dark
+# light
+# user-can-set
+appearance: https://imgse.com/i/pA1w4SI # Default value is auto
+
+# Miscellaneous
+favicon: images/favicon.ico
+
+friend_links:
+  - title: Google
+    link: https://www.google.com/
+  - title: Github
+    link: https://www.github.com/
+  - title: V2EX
+    link: https://v2ex.com/
+  - title: Twitter
+    link: https://twitter.com/
+  - title: freezetheflame
+    link: https://www.freezetheflame.cc/
+
+# Google Analytics
+ga_track_id:
+ga_domain:
+
+# Baidu Analytics
+ba_track_id:
+
+# picture of about page
+about_pic: /background.jpg
+
+image_zoom:
+  enable: true
+
+
