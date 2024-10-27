@@ -103,7 +103,7 @@ theme: hexo-theme-Claudia
 deploy:
   type: git
   repo: git@github.com:iKalous/iKalous.github.io.git
-  branch: master
+  branch: main
 
 inject:
   head:
