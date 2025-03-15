@@ -64,6 +64,8 @@ friend_links:
     link: https://twitter.com/
   - title: freezetheflame
     link: https://www.freezetheflame.cc/
+  - title: MHT's Blog
+    link: https://www.cnblogs.com/Martin-MHT
 
 # Google Analytics
 ga_track_id:
@@ -77,4 +79,4 @@ about_pic: /images/background.jpg
 
 image_zoom:
   enable: true
-  
+

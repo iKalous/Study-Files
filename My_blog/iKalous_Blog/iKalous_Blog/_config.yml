@@ -105,7 +105,3 @@ deploy:
   repo: git@github.com:iKalous/iKalous.github.io.git
   branch: main
 
-inject:
-  head:
-  - <link rel="stylesheet" href="/themes/hexo-theme-Claudia/source/backgroundset.css">
-  bottom: 
